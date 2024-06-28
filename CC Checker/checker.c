@@ -35,7 +35,7 @@ int main(int argc, char const *argv[])
 
     if (total%10==0)
     {
-        if(input[0] == '2' || input[0] == 5)
+        if(input[0] == '2' || input[0] == '5')
         {
             printf("VALID : MasterCard \n");
         }
