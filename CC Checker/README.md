@@ -18,7 +18,7 @@ Have you ever encountered an error just by entering your credit card number? If 
  <br>
  <h3> Output </h3> 
 Enter a card number: 4003600000000014  <br>
-RESULT : VALID
+RESULT : VALID VISA
 <br>
 
 
