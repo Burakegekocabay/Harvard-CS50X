@@ -32,7 +32,23 @@ int main(int argc, char const *argv[])
 
     if (total%10==0)
     {
-        printf("Your CC is valid.");
+        if(input[0] == '2' || input[0] == '5')
+        {
+            printf("VALID : MasterCard \n");
+        }
+        else if(input[0] == '3')
+        {
+            printf("VALID : American Express \n");
+        }
+        else if (input[0] == '4')
+        {
+            printf("VALID : Visa \n");
+        }
+        else
+        {
+            printf("VALID \n");
+        }
+        
     }
     else
     {
