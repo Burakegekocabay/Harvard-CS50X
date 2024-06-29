@@ -1,0 +1,62 @@
+.header
+{
+    background-color: #477bff;
+    color: #FFF;
+    text-align: center;
+    padding: 50px;
+}
+.main
+{
+    background-color: #FFF;
+    padding-left: 5%;
+
+}
+
+p{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+button
+{
+    background-color: #81a3ff;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    margin: 5px;
+}
+
+button:hover
+{
+    background-color: #0b6ddd;
+}
+
+.correct 
+{
+    background-color: green ;
+}
+.correct_text
+{
+    color: green;
+
+}
+
+.incorrect
+{
+    background-color: red ;
+}
+
+.incorrect_text
+{
+    color: red;
+
+}
+input
+{
+    width: 20%;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+
+}

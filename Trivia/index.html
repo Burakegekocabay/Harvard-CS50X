@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>Trivia!</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+
+        <script>
+            function checkAnswer(button,answer,result_id) 
+            {
+                var resultSpan = document.getElementById(result_id);
+
+                if (answer==="correct")
+                {
+                    button.classList.add('correct')
+                    resultSpan.textContent ="Correct!"
+                    resultSpan.classList.remove('incorrect_text');
+                    resultSpan.classList.add('correct_text');
+
+                }
+                else
+                {
+                    button.classList.add('incorrect')
+                    resultSpan.textContent ="Incorrect!, try again"
+                    resultSpan.classList.add('incorrect_text');
+                }
+            }
+
+            function checkInput()
+            {
+                var input = document.getElementById('input').value.toLowerCase();
+                var resultSpan = document.getElementById('result4');
+                if (input == "hamlet")
+                {
+                    document.getElementById('input_button').classList.add('correct')
+                    resultSpan.textContent ="Correct!"
+                    resultSpan.classList.remove('incorrect_text');
+                    resultSpan.classList.add('correct_text');
+                }
+                else
+                {
+                    document.getElementById('input_button').classList.add('incorrect')
+                    resultSpan.textContent ="Incorrect! , correct answer was : Hamlet"
+                    resultSpan.classList.add('incorrect_text');
+                }
+            }
+        </script>
+
+        <div class="header">
+            <h1><b>Trivia!</b></h1>
+
+        </div>
+
+        <div class="main">
+            <h2>Part 1 : Multiple Choice</h2>
+            <hr>
+            <p> Which country's king was the Magna Carta agreed with?</p>
+            <button onclick="checkAnswer(this,'incorrect','result1')">France</button>
+            <button onclick="checkAnswer(this,'incorrect','result1')">Germany</button>
+            <button onclick="checkAnswer(this,'correct','result1')">England</button>
+            <button onclick="checkAnswer(this,'incorrect','result1')">Spain</button>
+            <span id="result1"></span>
+
+            <p>Who assassinated U.S. President John F. Kennedy?</p>
+            <button onclick="checkAnswer(this,'correct','result2')">Lee Harvey Oswald</button>
+            <button onclick="checkAnswer(this,'incorrect','result2')">Jack Ruby</button>
+            <button onclick="checkAnswer(this,'incorrect','result2')">Clay Shaw</button>
+            <span id="result2"> </span>
+
+            <p>In which year did the French Revolution take place?</p>
+            <button onclick="checkAnswer(this,'incorrect','result3')">1889</button>
+            <button onclick="checkAnswer(this,'correct','result3')">1789</button>
+            <button onclick="checkAnswer(this,'incorrect','result3')">1759</button>
+            <button onclick="checkAnswer(this,'incorrect','result3')">1899</button>
+            <span id="result3"> </span>
+            <br><br><br><br><br>
+
+            <h2>Part 2 : Free Response</h2>
+            <hr>
+            <p>In which play by Shakespeare does the famous line "To be, or not to be, that is the question" appear?</p>
+            <input id="input" type="text" > 
+            <button id ="input_button" onclick="checkInput()">Check Answer</button>
+            <span id="result4"> </span>
+            <br><br><br><br><br>
+
+
+        </div>
+    </body>
+</html>
